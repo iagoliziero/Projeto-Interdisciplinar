@@ -80,7 +80,10 @@ b {
 }
 #titulo-saude{
    align-items: center;
-   margin-bottom: -45px;
+   margin-bottom: -75px;
+   text-align: center;
+   margin-left: 370px;
+   margin-top: 0;
 }
 h1 {
     font-size: 2.5rem;
@@ -127,9 +130,13 @@ p {
     display: flex;
     justify-content: flex-end;
 }
-.header-brand .brand-logo{
+.header-brand /* .brand-logo */{
     width: 3.25rem; /* 3.25rem = 52px */
     height: 3.25rem;  /* altura */
+}
+.brand-logo{
+    padding: 10px 30px 10px 30px;
+    height: 3.25rem;
 }
 #toggleTheme{
     font-size: 1.5rem;
@@ -147,11 +154,13 @@ p {
 }
 .menu-item{
     width: 100%;
+    padding: 0px 0px 0px 10px;
 }
 .menu-link{    /* Estrutura do Li */
     display: flex;  /* flex é usado quando é mobile e desktop */
     align-items: center;
     gap: .5rem;
+    padding: 0px 0px 10px 10px;
 }
 
 .menu-link.active .menu-icon,
@@ -161,7 +170,7 @@ p {
     color: var(--primary-color); /* para deixar cor quando uma das abas estiver aberta */
 } 
 .menu-text{    /* TAG span */
-    font-size: .75rem;
+    font-size: .85rem;
     text-transform: uppercase;
 }
 .menu-mobile{     
@@ -294,9 +303,11 @@ p {
    object-position: center;
 }
 .cartao-texto {
-    border-radius: 10px;
-    max-width: 500px;
-    max-height:300px ;
+    border-radius:85px;
+    width: 1400px;
+    height:600px ;
+    margin-top: 60px;
+    
 }
 .card-body {
     display: flex;
@@ -468,7 +479,7 @@ footer p {
     }
 
     .nav-mobile {
-        display: none; /* Fazem o menu superior sumir quando estiver no mobile */
+        display: none;  /* Fazem o menu superior sumir quando estiver no mobile  */
     }
     .header-nav {
         display: flex;
@@ -476,7 +487,8 @@ footer p {
     .header-nav, 
     .header-toggle {
         min-width: 30%;
-    }
+    } 
+    
     h1 {
         font-size: 3rem;
         margin: 30px 150px 0px 500px;
@@ -511,7 +523,7 @@ footer p {
 
     .projeto-card.card-reverso {
         flex-direction: row-reverse;
-        justify-content: space-between;
+        justify-content: space-between;  
     }
     .cartao {
         width: 55%;
@@ -547,7 +559,7 @@ footer p {
         width: auto;
     }
     .tecnologias{
-        flex-direction: row;
+        flex-direction:column;
         justify-content: space-between;
         padding: 10rem 6rem 4rem;
     }
