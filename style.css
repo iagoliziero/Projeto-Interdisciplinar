@@ -240,6 +240,48 @@ p {
     gap: 1.5rem;
 }
 
+.calculotmb {
+    text-align: center;
+    font-family: 'montserrat';
+}
+
+.botaotmb {
+   
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    height: 40px;
+    width: 100px;
+    padding: 7px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.infostmb {
+    margin-top: 100px;
+    text-align: center;
+}
+
+#resultadoSaida {
+    max-width: 7px;
+    display: inline;
+    margin: auto;
+    margin-top: 10px
+}
+
+/*página Alimentacao */
+.alimentacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.25rem; /* pra saber em "px" so pegar o valor e multiplicar por 16 */
+    padding: 6.25rem 1rem 2rem;
+    margin-top: -5.5rem;
+    margin-right: 10rem; /* espaco lateral */
+    margin-left: 10rem;
+}
 
 /* Estilo do section */
 
