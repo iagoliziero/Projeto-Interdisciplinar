@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,24 +11,31 @@
 </head>
 
 <body>
-    <header class="header">  <!-- cabeçalho -->
+    <script src="Main.js"></script>
+   <header class="header">  
+
         <nav class="header-nav"> 
+            <div class="header-brand">
+                <a href="index.html">
+                    <img src="imagem caio/Novo Projeto (5).png" alt="" class="brand-logo">
+                </a>
+            </div>
             <ul class="menu menu-principal">
                 <li class="menu-item"> 
                     <a href="index.html" class="menu-link active">
-                        <span class="menu-text"> Home </span>
+                        <span class="menu-text"> Exercícios Físicos </span>
                     </a> 
                 </li>
                 
                 <li class="menu-item"> 
                     <a href="#projetos" class="menu-link">
-                         <span class="menu-text"> Projetos </span>
+                         <span class="menu-text"> Alimentação Equilibrada</span>
                     </a> 
                 </li>
 
                 <li class="menu-item">  
                     <a href="#sobre" class="menu-link">
-                        <span class="menu-text"> Sobre </span>
+                        <span class="menu-text"> Bem-estar </span>
                     </a>  
                 </li>
 
@@ -40,25 +47,25 @@
 
                 <li class="menu-item">  
                     <a href="#contato" class="menu-link">
-                        <span class="menu-text"> Contato </span>
+                        <span class="menu-text"> Sobre nós </span>
                     </a> 
                  </li>
             </ul>
         </nav>
 
-        <div class="header-brand">
+       <!--  <div class="header-brand">
             <a href="index.html">
                 <img src="imagem caio/Novo Projeto (5).png" alt="" class="brand-logo">
             </a>
-        </div>
+        </div> -->
 
         <div class="header-toggle">
             <i id="toggleTheme" class="bi bi-sun"> </i>
-            <!-- Icone modo Dark e Light Lua e Sol -->
+            <!--  Icone modo Dark e Light Lua e Sol  -->
         </div>
-    </header> <!-- FIM cabeçalho --> 
-    
-    <!-- Menu Mobile -->
+    </header> 
+     
+     <!-- Menu Mobile -->
     <nav class="nav-mobile">
         <ul class="menu menu-mobile"> 
             <li class="menu-item">
@@ -88,171 +95,64 @@
         </ul>
     </nav> 
     <!-- FIM Menu Mobile -->
+
     <main id="home">
         <div class="main-content">
-           <h1 id="titulo-saude"> O que é TMB</h1> <!-- titulo principal -->
+           <h1 id="titulo-saude"> O que é TMB?</h1> <!-- titulo principal -->
           
            
         </div>
         
     </main> <!-- Fim da main -->
 
-    
-
     <section class="tecnologias"> 
-        <h2> A taxa Metabólica Basal (TMB) é a quantidade mínima de energia que o corpo precisa para manter suas funções vitais em repouso, como respirar, bombear sangue e manter a temperatura corporal. Ela representa o número de calorias que seu corpo queima apenas para "se manter vivo", sem considerar atividades físicas ou digestão. <br> A TMB é influenciada por fatores como: </h2>
-        
+        <h2>  </h2>
+        <p class="introducao"> 
+            A Taxa Metabólica Basal (TMB) é a quantidade mínima de energia que o corpo precisa para manter suas funções vitais em repouso, como respirar, bombear sangue e manter a temperatura corporal. Ela representa o número de calorias que seu corpo queima apenas para "se manter vivo", sem considerar atividades físicas ou digestão. <br> <br>
+            A TMB é influenciada por fatores como: <br> <br>
+            <b>Idade:</b> Quanto mais velho, menor tende a ser a TMB. <br> <br>
+            Sexo: Homens, geralmente, têm uma TMB mais alta que mulheres devido a uma maior massa muscular. <br><br>
+            Composição corporal: Quanto mais músculos, maior a TMB, já que músculos consomem mais energia que gordura. <br><br>
+            Genética: Algumas pessoas naturalmente têm uma TMB mais alta ou mais baixa. <br><br>
+            Saber sua TMB é útil para definir quantas calorias você precisa ingerir para atingir objetivos como perder peso, ganhar massa muscular ou manter seu peso atual.
+            
 
+        </p>
+        <img class="cartao-texto" src="imagem caio/Design sem nome (2).png" alt="">
     </section> 
     <!-- Fim da seção -->
-           
-    <section id="projetos" class="projetos"> <!-- Seção projetos -->
-        <h2>Projetos</h2>
+    
+    <nav class="calculotmb">
+        <ul>
+        <br>
+        <h2> <b> Cálculo TMB </b></h12>
 
-        <div class="projetos-container">
+        </ul>
 
-            <div class="projeto-card">
+          <!-- Inputs de entrada -->
+        <input type="number" id="peso" placeholder="Peso em Kg">  </input>
+        <input type="number" id="altura" placeholder="Altura em cm">  </input>
+        <input type="number" id="idade" placeholder="Idade em anos">  </input>
 
-                <img class="cartao" src="img/projetos/josisbox.jpg" alt="">
-                
-                <div class="card-body">
-                    <h3 class="card-title"> Josi's Box Ecommerce </h3>
-                    <p class="card-descricao"> Loja Virtual de Livros </p>
+         <!-- Seletor de operações -->
+        <select name="operacao" id="operacao">
 
-                    <ul class="card-list">
-                        <li class="card-item"> Favoritos </li>
-                        <li class="card-item"> Carrinho de Compras </li>
-                        <li class="card-item"> Filtro de Preço e Categoria </li>
-                    </ul>
+            <option value="homem"> Homem </option>
+            <option value="mulher"> Mulher </option>
+        </select>
 
-                    <ul class="tecnologias-lista">
-                        <li class="tecnologias-item">
-                            <img class="tecnologias-logo" src="img/tecnologias/Angular.svg" alt="">
-                        </li>
+            <!-- Botão para executar o cálculo -->
+        <input class="botaotmb" type="submit" value="calcular" onclick="calculo()">
+        <br> <br>
+        <h4 id="resultadoSaida"> </h4>
+    </nav>
+    <h6 class="infostmb"> Essas fórmulas são apenas estimativas baseadas em médias populacionais, então podem não refletir com exatidão o metabolismo individual. Vários fatores influenciam a TMB e podem fazer com que o valor real seja diferente do calculado. <br> Por essas razões, a TMB calculada deve ser usada apenas como uma referência inicial e ajustada com base em resultados práticos e acompanhamento, especialmente para quem busca metas específicas como perda de peso ou ganho de massa muscular.</h6>
 
-                        <li class="tecnologias-item">
-                            <img class="tecnologias-logo" src="img/tecnologias/TypeScript.svg" alt="">
-                        </li>
-
-                        <li class="tecnologias-item">
-                            <img class="tecnologias-logo" src="img/tecnologias/Bootstrap.svg" alt="">
-                        </li>
-
-                        <li class="tecnologias-item">
-                            <img class="tecnologias-logo" src="img/tecnologias/Javascript.svg" alt="">
-                        </li>
-                    </ul>
-                                
-
-                    <div class="card-button">
-                        <button class="btn btn-primary">
-                            <a href="https://www.amazon.com.br/Livros/b/?ie=UTF8&node=6740748011&ref_=nav_cs_books" target="_blank">
-                                <span> Prévia </span>
-                                <i class="bi bi-arrow-up-right"> </i>
-                            </a>
-                        </button>
-                        <button class="btn">
-                            <a href="https://github.com/caio3011/josis-teste/tree/main" target="_blank">
-                                <span> Repositório</span>
-                            </a>
-                        </button>
-                    </div>
-                </div> <!-- Fim card-body -->
-            </div> <!-- Fim projeto-card -->
-
-
-            <div class="projeto-card card-reverso">
-                
-                <img class="cartao" src="img/projetos/portifoliopessoal.png" alt="">
-
-                <div class="card-body">
-                    <h3 class="card-title"> Portifolio Pessoal </h3>
-                    <p class="card-descricao"> A história por trás dos Estilos Artísticos </p>
-
-                    <ul class="card-list">
-                        <li class="card-item"> Postagens relacionadas em destaque. </li>
-                        <li class="card-item"> Filtos por tag e Categorias. </li>
-                        <li class="card-item"> Biografia do Autor. </li>
-                    </ul>
-
-                    <ul class="tecnologias-lista">
-                        <li class="tecnologias-item">
-                             <img class="tecnologias-logo" src="img/tecnologias/HTML5.svg" alt="">
-                         </li>
-     
-                         <li class="tecnologias-item">
-                             <img class="tecnologias-logo" src="img/tecnologias/Css.svg" alt="">
-                         </li>
-     
-                         <li class="tecnologias-item">
-                             <img class="tecnologias-logo" src="img/tecnologias/Bootstrap.svg" alt="">
-                         </li>
-     
-                         <li class="tecnologias-item">
-                             <img class="tecnologias-logo" src="img/tecnologias/Javascript.svg" alt="">
-                         </li>
-                     </ul>
-
-                </div> <!-- Fim card-body -->
-
-            </div> <!-- Fim card-reverso -->
-
-            <div class="projeto-card">
-
-                <img class="cartao" src="img/projetos/games-store.jpg" alt="">
-                
-                <div class="card-body">
-                    <h3 class="card-title"> Games Store </h3>
-                    <p class="card-descricao"> Loja online de Games </p>
-
-                    <ul class="card-list">
-                        <li class="card-item"> Favoritos </li>
-                        <li class="card-item"> Carrinho de Compras </li>
-                        <li class="card-item"> Filtro de Preço e Categoria </li>
-                    </ul>
-
-                    <ul class="tecnologias-lista">
-                    <li class="tecnologias-item">
-                            <img class="tecnologias-logo" src="img/tecnologias/Angular.svg" alt="">
-                        </li>
-
-                        <li class="tecnologias-item">
-                            <img class="tecnologias-logo" src="img/tecnologias/TypeScript.svg" alt="">
-                        </li>
-
-                        <li class="tecnologias-item">
-                            <img class="tecnologias-logo" src="img/tecnologias/Bootstrap.svg" alt="">
-                        </li>
-
-                        <li class="tecnologias-item">
-                            <img class="tecnologias-logo" src="img/tecnologias/Javascript.svg" alt="">
-                        </li>
-                    </ul>
-
-                    <div class="card-button">
-                        <button class="btn btn-primary">
-                            <a href="https://www.xbox.com/pt-br/xbox-game-pass?ef_id=_k_EAIaIQobChMIzaGO_6vRhQMVjzbUAR1rygKbEAAYASAAEgLmFPD_BwE_k_&OCID=AIDcmmaigrfm8i_SEM__k_EAIaIQobChMIzaGO_6vRhQMVjzbUAR1rygKbEAAYASAAEgLmFPD_BwE_k_&gad_source=1&gclid=EAIaIQobChMIzaGO_6vRhQMVjzbUAR1rygKbEAAYASAAEgLmFPD_BwE#join" target="_blank">
-                                <span> Prévia </span>
-                                <i class="bi bi-arrow-up-right"> </i>
-                            </a>
-                        </button>
-                        <button class="btn">
-                            <a href="https://github.com/caio3011/josis-teste/tree/main" target="_blank">
-                                <span> Repositório</span>
-                            </a>
-                        </button>
-                    </div> <!-- Fim card-button -->
-                </div>
-            </div>       
-
-
-        </div><!-- Fim projetos-container -->
-    </section> 
 
     <footer>
         <p>
-            &copy; 2024. Trabalho desenvolvido na <a href="https://www.cps.sp.gov.br/etec/" target="_blank"> Etec.</a>
-            Desenvolvido por BRIJAC
+            &copy; 2024. Trabalho Interdisciplinar desenvolvido pela <a href="https://www.cps.sp.gov.br/etec/" target="_blank"> Etec.</a>
+            Desenvolvido por BRIJAC 
         </p>
     </footer>
 
