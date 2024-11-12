@@ -82,8 +82,11 @@ b {
    align-items: center;
    margin-bottom: -75px;
    text-align: center;
-   margin-left: 370px;
+   margin-left: 400px;
    margin-top: 0;
+   font-family: "Darker Grotesque", serif;
+   font-optical-sizing: auto;
+   font-weight: 60px;
 }
 h1 {
     font-size: 2.5rem;
@@ -117,6 +120,12 @@ p, span, li {
 p {
     text-align: justify;
 }
+.card-title {
+        font-family: "Darker Grotesque", serif;
+        font-optical-sizing: auto;
+        font-weight: 60px;
+}
+
 .header {
     display: flex;
     flex-flow: row wrap;
@@ -155,6 +164,27 @@ p {
 .menu-item{
     width: 100%;
     padding: 0px 0px 0px 10px;
+}
+.lista1{
+    display: left;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Espaçamento entre os itens */
+    text-align: center;
+}
+.lista2{
+    display: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Espaçamento entre os itens */
+    text-align: center;
+}
+.lista3{
+    display: right;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Espaçamento entre os itens */
+    text-align: center;
 }
 .menu-link{    /* Estrutura do Li */
     display: flex;  /* flex é usado quando é mobile e desktop */
@@ -240,48 +270,6 @@ p {
     gap: 1.5rem;
 }
 
-.calculotmb {
-    text-align: center;
-    font-family: 'montserrat';
-}
-
-.botaotmb {
-   
-    display: block;
-    margin: auto;
-    margin-top: 20px;
-    height: 40px;
-    width: 100px;
-    padding: 7px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.infostmb {
-    margin-top: 100px;
-    text-align: center;
-}
-
-#resultadoSaida {
-    max-width: 7px;
-    display: inline;
-    margin: auto;
-    margin-top: 10px
-}
-
-/*página Alimentacao */
-.alimentacao {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1.25rem; /* pra saber em "px" so pegar o valor e multiplicar por 16 */
-    padding: 6.25rem 1rem 2rem;
-    margin-top: -5.5rem;
-    margin-right: 10rem; /* espaco lateral */
-    margin-left: 10rem;
-}
 
 /* Estilo do section */
 
@@ -340,14 +328,14 @@ p {
 }
 .cartao {
    width: 100%;
-   border-radius: 0.5rem;
+   border-radius: 25px;
    object-fit: cover;
    object-position: center;
 }
 .cartao-texto {
-    border-radius:85px;
-    width: 1400px;
-    height:600px ;
+    border-radius: 50px;
+    height: 550px;
+    width: 1450px;
     margin-top: 60px;
     
 }
@@ -360,6 +348,7 @@ p {
 }
 .card-descricao {
     color: var(--title-color);
+
 }
 .card-list {
     margin-left: 1.25rem;
@@ -541,9 +530,6 @@ footer p {
     #home, .projetos, .sobre { /* Desgrudou dos cantos deixando tudo no centro */
         padding: 8rem 6rem 4rem 6rem;
     }
-    .contato p {
-        width: 80%;
-    }
     .main-content {
         display: flex;
         flex-direction: column;
@@ -568,7 +554,8 @@ footer p {
         justify-content: space-between;  
     }
     .cartao {
-        width: 55%;
+        width: 550px;
+        height: 390px;
     }
     .sobre {
         gap: 5rem;
