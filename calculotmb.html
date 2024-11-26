@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Interdisciplinar </title>
+    <title> Cálculo TMB </title>
     <!-- title = titulo -->
-    <link rel="shortcut icon" href="imagem caio/Novo Projeto (5).png">
+    <link rel="shortcut icon" href="imagem caio/Novo Projeto (1).png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
@@ -15,12 +15,14 @@
     <script src="Main.js"></script>
    <header class="header">  
 
+    <div class="header-brand">
+        <a href="index.html">
+            <img src="imagem caio/Novo Projeto (1).png" alt="" class="brand-logo">
+        </a>
+    </div>
+    <div class="container-nav">
         <nav class="header-nav"> 
-            <div class="header-brand">
-                <a href="index.html">
-                    <img src="imagem caio/Novo Projeto (5).png" alt="" class="brand-logo">
-                </a>
-            </div>
+            
             <ul class="menu menu-principal">
                 <li class="menu-item"> 
                     <a href="index.html" class="menu-link active">
@@ -30,13 +32,13 @@
                 
                 <li class="menu-item"> 
                     <a href="alimentacao.html" class="menu-link">
-                         <span class="menu-text"> Alimentação</span>
+                         <span class="menu-text"> Alimentação </span>
                     </a> 
                 </li>
 
                 <li class="menu-item">  
-                    <a href="" class="menu-link">
-                        <span class="menu-text"> Bem-estar </span>
+                    <a href="bemEstar.html" class="menu-link">
+                        <span class="menu-text">  Bem-estar </span>
                     </a>  
                 </li>
 
@@ -53,7 +55,7 @@
                  </li>
             </ul>
         </nav>
-
+    </div>
        <!--  <div class="header-brand">
             <a href="index.html">
                 <img src="imagem caio/Novo Projeto (5).png" alt="" class="brand-logo">
@@ -131,10 +133,13 @@
         </ul>
         <br> <br>
           <!-- Inputs de entrada -->
-        <input type="number" id="peso" placeholder="Peso em Kg">  </input>
-        <input type="number" id="altura" placeholder="Altura em cm">  </input>
-        <input type="number" id="idade" placeholder="Idade em anos">  </input>
+        <div class="input-container">
 
+            <input type="number" id="peso" placeholder="Peso em Kg">        </input>
+            <input type="number" id="altura" placeholder="Altura em cm">    </input>
+ w           <input type="number" id="idade" placeholder="Idade em anos">    </input>
+
+        </div>
          <!-- Seletor de operações -->
         <select name="operacao" id="operacao">
 
