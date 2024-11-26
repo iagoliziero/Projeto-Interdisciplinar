@@ -8,7 +8,7 @@
     --primary-bg-color: #0e0d0d;  /* BG = Background */
     --secondary-bg-color: #504e4e;
     --primary-border-color: #777474; 
-    --secondary-border-color: #ffffff;
+    --secondary-border-color: #ffff;
 
     /* Definir cores padrão para os textos em variáveis */
     --title-color: #fcfcfc;
@@ -80,13 +80,10 @@ b {
 }
 #titulo-saude{
    align-items: center;
-   margin-bottom: -75px;
+   margin-bottom: -70px;
    text-align: center;
-   margin-left: 400px;
+   margin-left: 370px;
    margin-top: 0;
-   font-family: "Darker Grotesque", serif;
-   font-optical-sizing: auto;
-   font-weight: 60px;
 }
 h1 {
     font-size: 2.5rem;
@@ -108,11 +105,14 @@ h4 {
     font-size: 1.15rem;
     text-align: left;
 }
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: 'Monteserrat', Tahoma, Geneva, Verdana, sans-serif;
     text-transform: uppercase;
     color: var(--title-color);
     font-weight: 200;
+}
+h3{
+    margin: 30px;
 }
 p, span, li {
     font-size: 1rem;
@@ -120,12 +120,6 @@ p, span, li {
 p {
     text-align: justify;
 }
-.card-title {
-        font-family: "Darker Grotesque", serif;
-        font-optical-sizing: auto;
-        font-weight: 60px;
-}
-
 .header {
     display: flex;
     flex-flow: row wrap;
@@ -138,20 +132,91 @@ p {
 .header-toggle{
     display: flex;
     justify-content: flex-end;
+    position: absolute;
+    right: 4%;
 }
 .header-brand /* .brand-logo */{
-    width: 3.25rem; /* 3.25rem = 52px */
-    height: 3.25rem;  /* altura */
+    width: 1rem; /* 3.25rem = 52px */
+    height: 1rem;  /* altura */
+
 }
 .brand-logo{
-    padding: 10px 30px 10px 30px;
-    height: 3.25rem;
+    position: relative;
+    bottom: 17px;
+    height: 4rem;
+    width: 4rem;
 }
 #toggleTheme{
     font-size: 1.5rem;
     color: var(--primary-color);
     cursor: pointer;
     transition: ease-in-out .4s;
+}
+/* Container para organizar os inputs lado a lado */
+.input-container input {
+    border: 2px solid #ddd; /* / Borda leve / */
+    border-radius: 8px; /* / Bordas arredondadas  */
+    padding: 12px; /* / Espaçamento interno  */
+    font-size: 16px; /* / Tamanho do texto  */
+    outline: none; /* / Remove o contorno padrão ao focar  */
+    transition: border-color 0.3s, box-shadow 0.3s; /* / Efeitos de foco suaves  */
+    flex: 1 1 120px; /* / Define largura mínima e flexibilidade  */
+    max-width: 150px; /* / Limita a largura máxima  */
+}
+
+/* / Placeholder estilizado / */
+.input-container input::placeholder {
+    color: #aaa; /* / Cor mais discreta / */
+    font-style: italic; /* / Estilo diferenciado / */
+}
+
+/* / Efeito ao focar no input / */
+.input-container input:focus {
+    border-color: #007BFF; /* / Cor azul de destaque / */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);/*  / Sombra leve / */
+}
+
+/* / Ajuste para dispositivos móveis / */
+@media (max-width: 600px) {
+    .input-container {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .input-container input {
+        max-width: 100%; 
+    }
+} 
+#operacao {
+    border: 2px solid #ddd; 
+    margin-top: 1rem;
+    border-radius: 8px; 
+    padding: 12px; 
+    font-size: 16px; 
+    outline: none; 
+    transition: border-color 0.3s, box-shadow 0.3s; 
+    background-color: #fff; 
+    color: #333; 
+    appearance: none; 
+    width: 100%; 
+    max-width: 200px; 
+    cursor: pointer; 
+}
+.container-nav{
+    position: relative;
+    right: 550px;
+}
+/* / Efeito ao focar no select / */
+#operacao:focus {
+    border-color: #007BFF; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+/* / Estilo das opções do select  */
+#operacao option { 
+    padding: 10px; 
+    background-color: #fff; 
+    color: #333;
 }
 .menu{    /* UL */
     display: flex;
@@ -160,32 +225,33 @@ p {
 }
 .menu-principal{
     gap: 1rem;
+    padding-left:100px;
 }
 .menu-item{
-    width: 100%;
+    width: 120px; 
     padding: 0px 0px 0px 10px;
+    color: rgb(172, 23, 23); 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+} 
+
+.menu-link {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
 }
-.lista1{
-    display: left;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px; /* Espaçamento entre os itens */
-    text-align: center;
+.menu-link:hover {
+    color: #ff5722;
 }
-.lista2{
-    display: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px; /* Espaçamento entre os itens */
-    text-align: center;
+.menu-link:hover .menu-text {
+    color: #ff5722;
 }
-.lista3{
-    display: right;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px; /* Espaçamento entre os itens */
-    text-align: center;
+
+.menu-link:hover .menu-text {
+    color: #ff5722; 
 }
+
+
 .menu-link{    /* Estrutura do Li */
     display: flex;  /* flex é usado quando é mobile e desktop */
     align-items: center;
@@ -202,6 +268,8 @@ p {
 .menu-text{    /* TAG span */
     font-size: .85rem;
     text-transform: uppercase;
+    position: relative;
+    left: 136.3px;
 }
 .menu-mobile{     
     width: 100vw;
@@ -224,6 +292,7 @@ p {
 
 .header-nav{
     display: none;
+
 }
 /* ------- Fim CSS Menu ------- */
 
@@ -328,16 +397,16 @@ p {
 }
 .cartao {
    width: 100%;
-   border-radius: 25px;
+   border-radius: 0.5rem;
    object-fit: cover;
    object-position: center;
 }
 .cartao-texto {
-    border-radius: 50px;
-    height: 550px;
-    width: 1450px;
+    border-radius:85px;
+    width: 1400px;
+    height:600px ;
     margin-top: 60px;
-    
+
 }
 .card-body {
     display: flex;
@@ -348,7 +417,6 @@ p {
 }
 .card-descricao {
     color: var(--title-color);
-
 }
 .card-list {
     margin-left: 1.25rem;
@@ -379,6 +447,55 @@ p {
     margin: auto;
 }
 /* ------- Fim projeto ------- */
+
+/* Calculo TMB */
+.calculotmb {
+    text-align: center;
+    font-family: 'montserrat';
+}
+.alimentacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.25rem; /* pra saber em "px" so pegar o valor e multiplicar por 16 /
+    padding: 6.25rem 1rem 2rem;
+    margin-top: -5.5rem;
+    margin-right: 10rem; / espaco lateral */
+    margin-left: 10rem;
+}
+
+.botaotmb {
+
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    height: 40px;
+    width: 100px;
+    padding: 7px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.infostmb {
+    margin-top: 80px;
+    text-align: center;
+}
+h4 {
+    font-family: 'Monteserrat';
+}
+#resultadoSaida {
+    font-size: 20px;
+    max-width: 7px;
+    display: inline;
+    position: relative;
+    top: 1rem;
+}
+.introducao {
+   margin-right: 110px;
+} 
+/* Fim Calculo */
 
 .sobre{
     display: flex;  /* Dimensiona as coisas pra não se sobre sairem  */
@@ -489,6 +606,22 @@ p {
 .contato .email {
     text-transform: lowercase;
 }
+.lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre as colunas */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista li {
+    flex: 1 1 30%; /* Três colunas ajustáveis */
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
 
 /* footer */
 footer {
@@ -500,7 +633,8 @@ footer p {
     padding: 1rem;
 }
 
-/* Responsividade  768px */
+/* responsividade */
+
 @media (min-width: 768px ) {  
     .header {
         position: fixed;
@@ -530,6 +664,9 @@ footer p {
     #home, .projetos, .sobre { /* Desgrudou dos cantos deixando tudo no centro */
         padding: 8rem 6rem 4rem 6rem;
     }
+    .contato p {
+        width: 80%;
+    }
     .main-content {
         display: flex;
         flex-direction: column;
@@ -554,8 +691,7 @@ footer p {
         justify-content: space-between;  
     }
     .cartao {
-        width: 550px;
-        height: 390px;
+        width: 55%;
     }
     .sobre {
         gap: 5rem;
