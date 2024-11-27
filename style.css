@@ -406,7 +406,8 @@ p {
     width: 1400px;
     height:600px ;
     margin-top: 60px;
-
+    text-align: center;
+    margin: 10px 450px 10px 300px;
 }
 .card-body {
     display: flex;
