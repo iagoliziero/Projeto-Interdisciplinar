@@ -52,6 +52,11 @@ body {
     background: var(--primary-bg-color);
     font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-color); /* cor do Texto*/
+    transform: scale(0.8); /* Reduz a escala para 80% */
+    transform-origin: top left;
+    width: 125%; /* Aumenta a largura da página para compensar a redução */
+    height: 125%; /* Aumenta a altura da página para compensar a redução */
+    overflow-x: hidden; 
 }
 
 ::-webkit-scrollbar {
@@ -204,7 +209,7 @@ p {
 }
 .container-nav{
     position: relative;
-    right: 550px;
+    right: 480px;
 }
 /* / Efeito ao focar no select / */
 #operacao:focus {
